@@ -7,10 +7,11 @@ let array = [];
 function adicionarAmigo(){
     let armazenandoNome = document.querySelector('input').value;
     if (array.includes(armazenandoNome)){
-        alert("Digite nome e sobrenome, esse nome já existe dentro da lista");
+        exibirMensagemNaTela('h2','Digite nome e sobrenome, esse nome já existe dentro da lista');
     }else if(armazenandoNome == ''){
-        alert("Por favor, Insira um nome!");
+        alert('Por favor, Insira um nome!');
     }else{
+        exibirMensagemNaTela('h2', 'Digite o nome dos seus amigos');
         array.push(armazenandoNome);
         limparCampo()
         listaDeAmigos();
@@ -20,6 +21,11 @@ function adicionarAmigo(){
     }
 }
 
+
+function exibirMensagemNaTela(tag,texto){
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
 // Lista os nomes na parte debaixo do Input | INCOMPLETO AINDA
 
 function listaDeAmigos(){
