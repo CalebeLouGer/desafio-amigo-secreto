@@ -2,9 +2,10 @@
 // programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let array = [];
 
+
+// Adiciona os nomes na Lista chamada "Array"
 function adicionarAmigo(){
     let armazenandoNome = document.querySelector('input').value;
-    //let quantidadeElementosNaLista = listaAmigos.length;
     if (array.includes(armazenandoNome)){
         alert("Digite nome e sobrenome, esse nome já existe dentro da lista");
     }else if(armazenandoNome == ''){
@@ -12,20 +13,28 @@ function adicionarAmigo(){
     }else{
         array.push(armazenandoNome);
         limparCampo()
+        listaDeAmigos();
+
+        // Pra visualização da Lista no console
         return console.log(array);
     }
 }
 
+// Lista os nomes na parte debaixo do Input | INCOMPLETO AINDA
 
-/*function atualizarAmigo(){
-        let atualizarLista = document.getElementById('listaAmigos');
-        atualizarLista.innerHTML = '';
-        let quantidadeElementosNaLista = array.length;
-        for(let i = 0; i < quantidadeElementosNaLista;i++){
-            array.innerHTML = `<li> ${array}`;
-            return console.log('passei aq');
+function listaDeAmigos(){
+    let qtdElementoLista = array.length;
+    if(qtdElementoLista > 0){
+        let lista = document.querySelector('ul');
+        lista.innerHTML = '';
+        for(let i = 0; i < qtdElementoLista; i++){
+            lista.innerHTML = `<li> ${array[i]} </li>`;
         }
-}*/
+    }
+}
+
+
+// Limpa o campo assim que clicamos em adiocionar
 function limparCampo(){
     armazenandoNome = document.querySelector('input');
     armazenandoNome.value = '';
