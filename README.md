@@ -1,4 +1,4 @@
-<h1>Jogo do número secreto</h1>
+<h1>Desafio do Amigo Secreto</h1>
 
 <h2> ✔ Sobre</h2>
 <p>Projeto utilizado nos cursos de lógica de programação da Alura. Consiste em um Desenvolvimento WEB para Sortear os Nomes dos Amigos Secretos.</p>
