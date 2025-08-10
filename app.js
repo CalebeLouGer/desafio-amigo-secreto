@@ -1,5 +1,4 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de 
-// programação. Aqui você deverá desenvolver a lógica para resolver o problema.
+// Arrays
 let array = [];
 let listaDeNomesSorteados = [];
 
@@ -26,7 +25,7 @@ function exibirMensagemNaTela(tag,texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
-// Lista os nomes na parte debaixo do Input | INCOMPLETO AINDA
+// Lista os nomes na parte debaixo do Input
 
 function listaDeAmigos(){
     let qtdElementoLista = array.length;
@@ -34,7 +33,7 @@ function listaDeAmigos(){
         let lista = document.querySelector('ul');
         lista.innerHTML = '';
         for(let i = 0; i < qtdElementoLista; i++){
-            lista.innerHTML = `<li> ${array[i]} </li>`;
+            lista.innerHTML += `<li> ${array[i]} </li>`;
         }
     }
 }
@@ -42,20 +41,18 @@ function listaDeAmigos(){
 // Sorteia os nomes da Lista
 function sortearAmigo(){
     let qtdElementoLista = array.length;
-    let qtdElementoListaAmigos = listaDeNomesSorteados.length;
+    //let qtdElementoListaAmigos = listaDeNomesSorteados.length;
     if(qtdElementoLista < 2){
         alert('Adicione pelo menos 2 nomes para o sorteio!');
     }else{
         let resultado = document.getElementById('resultado');
-
         let numeroAleatorio = parseInt(Math.floor(Math.random()* qtdElementoLista));
-
         let amigoSorteado = array[numeroAleatorio];
         if(listaDeNomesSorteados.includes(amigoSorteado)){
             sortearAmigo();
             return;
         }else{
-            listaDeNomesSorteados.push(amigoSorteado);
+            //listaDeNomesSorteados.push(amigoSorteado);
             resultado.innerHTML = `<p> O amigo sorteado foi: ${amigoSorteado}!</p>`;
         }
     }
