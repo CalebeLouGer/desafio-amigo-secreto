@@ -1,7 +1,8 @@
 <h1>Desafio do Amigo Secreto</h1>
 
 <h2> ✔ Sobre</h2>
-<p>Projeto utilizado nos cursos de lógica de programação da Alura. Consiste em um Desenvolvimento WEB para Sortear os Nomes dos Amigos Secretos.</p>
+<p> Este projeto, amplamente utilizado nos cursos de Lógica de Programação da Alura, consiste no desenvolvimento de uma aplicação web interativa para realizar o sorteio de nomes em brincadeiras de Amigo Secreto. O sistema permite que os participantes insiram seus nomes de forma simples e rápida, garantindo que todos sejam incluídos no sorteio. Após o cadastro, o programa realiza automaticamente o emparelhamento dos nomes, assegurando que cada pessoa receba um amigo secreto sem repetições ou conflitos. A proposta une conceitos fundamentais de lógica de programação e desenvolvimento web, tornando o aprendizado prático, divertido e aplicável a situações reais.
+</p>
 
 ## 🚀 Tecnologias
 <div>
@@ -11,5 +12,5 @@
 </div>
 
 # Time
-[<img loading="lazy" src="https://avatars.githubusercontent.com/u/131987253?s=400&u=c4c4706e7abb4639aa4331cff4359cdbff805d56&v=4" width=115><br><sub>Calebe Lourenço</sub>](https://github.com/calebelouger)
+[<img loading="lazy" src="https://avatars.githubusercontent.com/u/131987253?s=400&u=c4c4706e7abb4639aa4331cff4359cdbff805d56&v=4" width=115><br> <sub> Calebe Lourenço </sub>](https://github.com/calebelouger)
 

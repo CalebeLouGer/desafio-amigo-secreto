@@ -1,6 +1,5 @@
 // Arrays
 let array = [];
-let listaDeNomesSorteados = [];
 
 // Adiciona os nomes na Lista chamada "Array"
 function adicionarAmigo(){
@@ -20,13 +19,13 @@ function adicionarAmigo(){
     }
 }
 
-
+// Função de Trocar as mensagens no HTML por meio do JS
 function exibirMensagemNaTela(tag,texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
-// Lista os nomes na parte debaixo do Input
 
+// Lista os nomes na parte debaixo do Input
 function listaDeAmigos(){
     let qtdElementoLista = array.length;
     if(qtdElementoLista > 0){
@@ -41,20 +40,26 @@ function listaDeAmigos(){
 // Sorteia os nomes da Lista
 function sortearAmigo(){
     let qtdElementoLista = array.length;
-    //let qtdElementoListaAmigos = listaDeNomesSorteados.length;
     if(qtdElementoLista < 2){
         alert('Adicione pelo menos 2 nomes para o sorteio!');
     }else{
         let resultado = document.getElementById('resultado');
-        let numeroAleatorio = parseInt(Math.floor(Math.random()* qtdElementoLista));
-        let amigoSorteado = array[numeroAleatorio];
-        if(listaDeNomesSorteados.includes(amigoSorteado)){
-            sortearAmigo();
-            return;
-        }else{
-            //listaDeNomesSorteados.push(amigoSorteado);
-            resultado.innerHTML = `<p> O amigo sorteado foi: ${amigoSorteado}!</p>`;
+        resultado.innerHTML = '';
+        
+        let arrayAleatorio = array.slice();
+        for(let i = arrayAleatorio - 1;i > 0;i--){
+            let numeroAleatorio = parseInt(Math.floor(Math.random()* (i + 1)));
+            [arrayAleatorio[i], arrayAleatorio[numeroAleatorio]] = [arrayAleatorio[numeroAleatorio], arrayAleatorio[i]];
         }
+        for(let i = 0; i < qtdElementoLista; i++){
+            let amigo = arrayAleatorio[i];
+            let amigoSorteado = arrayAleatorio[(i + 1) % qtdElementoLista];
+            resultado.innerHTML += `<p>${amigo} -> ${amigoSorteado}</p>`;
+        }
+
+        // Atualiza listas de sorteados
+        //listaDeNomesSorteados = embaralhado.slice();
+        //sorteados = embaralhado.map((_, i) => embaralhado[(i + 1) % qtdElementoLista]);
     }
 }
 
