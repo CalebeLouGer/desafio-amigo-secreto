@@ -8,7 +8,7 @@
   ## Dificuldades enfrentadas Pela melhoria do projeto
   <ul>
     <li>Busca de novos Métodos como o 'slice()'</li>
-    <li>Um pouco da Logica</li>
+    <li>Um pouco da Lógica</li>
   </ul>
 
   ## 🚀 Tecnologias
